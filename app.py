@@ -7,6 +7,9 @@ import pandas as pd
 
 from util_analysis import comprehensive_dataset_evaluation, extract_csv_metadata_streamlit
 
+os.environ["KAGGLE_USERNAME"] = st.secrets["KAGGLE_USERNAME"]
+os.environ["KAGGLE_KEY"] = st.secrets["KAGGLE_KEY"]
+
 api = KaggleApi()
 api.authenticate()
 
