@@ -1,0 +1,50 @@
+{
+    "Project": {
+        "title": "Student Performance Analysis",
+        "keywords": []
+    },
+    "Owner": {
+        "name": "joelknapp"
+    },
+    "Notebook": {
+        "file": "student-performance-analysis.ipynb"
+    },
+    "File": [
+        {
+            "name": "Student_performance_data _.csv",
+            "path": "kaggle_notebooks/joelknapp_student-performance-analysis_/datasets/default/Student_performance_data _.csv",
+            "totalbytes": 166901
+        }
+    ],
+    "DataSets": [
+        {
+            "title": "Students Performance Dataset  - Academic Success Factors in High School Students"
+        }
+    ],
+    "Log": {
+        "filename": "student-performance-analysis.log",
+        "filepath": "/content/kaggle_notebooks/joelknapp_student-performance-analysis_/outputs/student-performance-analysis.log",
+        "total_bytes": 1573
+    },
+    "Model": [],
+    "CodeLine": {
+        "graphs": [
+            "Figure 1 - KNeighborsClassifier - Correlation Among Features",
+            "Figure 2 - KNeighborsClassifier - Selecting a Classification Model",
+            "Figure 3 - KNeighborsClassifier - Model Evaluation",
+            "Figure 4 - SVC - Model Evaluation (again)",
+            "Figure 5 - GradientBoostingClassifier - Reducing Dimensionality"
+        ],
+        "models": [
+            "CatBoostClassifier",
+            "AdaBoostClassifier",
+            "GradientBoostingClassifier",
+            "DecisionTreeClassifier",
+            "KNeighborsClassifier",
+            "LGBMClassifier",
+            "SVC",
+            "XGBClassifier",
+            "RandomForestClassifier"
+        ]
+    }
+}

@@ -1,0 +1,282 @@
+[
+    {
+        "typeName": "User",
+        "guid": "-459335690",
+        "attributes": {
+            "name": "aremoto",
+            "role": "Kaggle Contributor"
+        }
+    },
+    {
+        "typeName": "Project",
+        "guid": "-984682568",
+        "attributes": {
+            "description": "Retail sales forecast",
+            "keywords": [
+                "data visualization",
+                "finance",
+                "business"
+            ],
+            "createdBy": {
+                "guid": "-459335690"
+            },
+            "startDate": "2025-08-17",
+            "experiments": [
+                {
+                    "guid": "-794315240",
+                    "typeName": "Experiment"
+                }
+            ]
+        }
+    },
+    {
+        "typeName": "Experiment",
+        "guid": "-794315240",
+        "attributes": {
+            "description": "Retail sales forecast - Experiment",
+            "project": {
+                "guid": "-984682568"
+            },
+            "stages": [
+                {
+                    "guid": "-477465919",
+                    "typeName": "Stage"
+                }
+            ]
+        }
+    },
+    {
+        "typeName": "Stage",
+        "guid": "-477465919",
+        "attributes": {
+            "description": "Initial Stage",
+            "experiment": {
+                "guid": "-794315240"
+            },
+            "status": "Completed",
+            "iterations": [
+                {
+                    "guid": "-164799637",
+                    "typeName": "Iteration"
+                }
+            ]
+        }
+    },
+    {
+        "typeName": "Iteration",
+        "guid": "-164799637",
+        "attributes": {
+            "description": "Iteration 1",
+            "stage": {
+                "guid": "-477465919"
+            }
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-914757105",
+        "attributes": {
+            "description": "Retail Data Analytics - Historical sales data from 45 stores",
+            "producer": {
+                "guid": "-459335690"
+            },
+            "document": "Features data set.csv",
+            "format": "csv",
+            "size": 600478,
+            "storageLocation": "kaggle_notebooks/aremoto_retail-sales-forecast_/datasets/default/Features data set.csv"
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-751691605",
+        "attributes": {
+            "description": "Retail sales forecast",
+            "producer": {
+                "guid": "-459335690"
+            },
+            "document": "sales data-set.csv",
+            "format": "csv",
+            "size": 13264115,
+            "storageLocation": "kaggle_notebooks/aremoto_retail-sales-forecast_/datasets/default/sales data-set.csv"
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-171445384",
+        "attributes": {
+            "description": "Retail sales forecast",
+            "producer": {
+                "guid": "-459335690"
+            },
+            "document": "stores data-set.csv",
+            "format": "csv",
+            "size": 577,
+            "storageLocation": "kaggle_notebooks/aremoto_retail-sales-forecast_/datasets/default/stores data-set.csv"
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-613300894",
+        "attributes": {
+            "description": "Retail sales forecast",
+            "producer": {
+                "guid": "-459335690"
+            },
+            "document": "retail-sales-forecast.ipynb",
+            "format": "ipynb",
+            "size": null,
+            "storageLocation": "retail-sales-forecast.ipynb"
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-100426052",
+        "attributes": {
+            "description": "retail-sales-forecast.log",
+            "producer": {
+                "guid": "-459335690"
+            },
+            "document": "retail-sales-forecast.log",
+            "format": "log",
+            "size": 1137,
+            "storageLocation": "/content/kaggle_notebooks/aremoto_retail-sales-forecast_/outputs/retail-sales-forecast.log"
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-146216572",
+        "attributes": {
+            "description": "Figure 1 - Unknown - Gain some graphical insight",
+            "producer": {
+                "guid": "-459335690"
+            },
+            "document": "Unknown_-_Gain_some_graphical_insight.png",
+            "format": ".png",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-352471637",
+        "attributes": {
+            "description": "Figure 2 - Unknown - Forecast of the total sales volume",
+            "producer": {
+                "guid": "-459335690"
+            },
+            "document": "Unknown_-_Forecast_of_the_total_sales_volume.png",
+            "format": ".png",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-926750870",
+        "attributes": {
+            "description": "Figure 3 - Unknown - Model definition",
+            "producer": {
+                "guid": "-459335690"
+            },
+            "document": "Unknown_-_Model_definition.png",
+            "format": ".png",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-16394370",
+        "attributes": {
+            "description": "Figure 4 - Unknown - Forecast of the store-wise sales volume",
+            "producer": {
+                "guid": "-459335690"
+            },
+            "document": "Unknown_-_Forecast_of_the_store-wise_sales_volume.png",
+            "format": ".png",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-952465222",
+        "attributes": {
+            "description": "Figure 5 - Unknown - Look for predictive power from external variables",
+            "producer": {
+                "guid": "-459335690"
+            },
+            "document": "Unknown_-_Look_for_predictive_power_from_external_variables.png",
+            "format": ".png",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "Action",
+        "guid": "-166191116",
+        "attributes": {
+            "description": "Notebook retail-sales-forecast.ipynb v1",
+            "status": "Completed",
+            "inputData": [
+                "Features data set.csv",
+                "sales data-set.csv",
+                "stores data-set.csv"
+            ],
+            "outputData": "retail-sales-forecast.ipynb",
+            "iteration": {
+                "guid": "-164799637"
+            },
+            "madeBy": [
+                {
+                    "guid": "-459335690"
+                }
+            ],
+            "inputs": [
+                {
+                    "guid": "-914757105"
+                },
+                {
+                    "guid": "-751691605"
+                },
+                {
+                    "guid": "-171445384"
+                }
+            ],
+            "outputs": [
+                {
+                    "guid": "-613300894"
+                },
+                {
+                    "guid": "-146216572"
+                },
+                {
+                    "guid": "-352471637"
+                },
+                {
+                    "guid": "-926750870"
+                },
+                {
+                    "guid": "-16394370"
+                },
+                {
+                    "guid": "-952465222"
+                }
+            ]
+        }
+    },
+    {
+        "typeName": "Consensus",
+        "guid": "-792438886",
+        "attributes": {
+            "createdBy": {
+                "guid": "-459335690"
+            },
+            "result": "Approved",
+            "action": {
+                "guid": "-166191116",
+                "typeName": "Action"
+            }
+        }
+    }
+]

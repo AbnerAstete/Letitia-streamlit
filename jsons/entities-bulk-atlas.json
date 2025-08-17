@@ -1,0 +1,395 @@
+[
+    {
+        "typeName": "User",
+        "guid": "-577328530",
+        "attributes": {
+            "name": "joelknapp",
+            "role": "Kaggle Contributor"
+        }
+    },
+    {
+        "typeName": "Project",
+        "guid": "-510851955",
+        "attributes": {
+            "description": "Student Performance Analysis",
+            "keywords": [],
+            "createdBy": {
+                "guid": "-577328530"
+            },
+            "startDate": "2025-08-16",
+            "experiments": [
+                {
+                    "guid": "-23181826",
+                    "typeName": "Experiment"
+                }
+            ]
+        }
+    },
+    {
+        "typeName": "Experiment",
+        "guid": "-23181826",
+        "attributes": {
+            "description": "Student Performance Analysis - Experiment",
+            "project": {
+                "guid": "-510851955"
+            },
+            "stages": [
+                {
+                    "guid": "-698595",
+                    "typeName": "Stage"
+                }
+            ]
+        }
+    },
+    {
+        "typeName": "Stage",
+        "guid": "-698595",
+        "attributes": {
+            "description": "Initial Stage",
+            "experiment": {
+                "guid": "-23181826"
+            },
+            "status": "Completed",
+            "iterations": [
+                {
+                    "guid": "-820672525",
+                    "typeName": "Iteration"
+                }
+            ]
+        }
+    },
+    {
+        "typeName": "Iteration",
+        "guid": "-820672525",
+        "attributes": {
+            "description": "Iteration 1",
+            "stage": {
+                "guid": "-698595"
+            }
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-661775646",
+        "attributes": {
+            "description": "Students Performance Dataset  - Academic Success Factors in High School Students",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "Student_performance_data _.csv",
+            "format": "csv",
+            "size": 166901,
+            "storageLocation": "kaggle_notebooks/joelknapp_student-performance-analysis_/datasets/default/Student_performance_data _.csv"
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-56558087",
+        "attributes": {
+            "description": "Student Performance Analysis",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "student-performance-analysis.ipynb",
+            "format": "ipynb",
+            "size": null,
+            "storageLocation": "student-performance-analysis.ipynb"
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-576204069",
+        "attributes": {
+            "description": "student-performance-analysis.log",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "student-performance-analysis.log",
+            "format": "log",
+            "size": 1573,
+            "storageLocation": "/content/kaggle_notebooks/joelknapp_student-performance-analysis_/outputs/student-performance-analysis.log"
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-838637192",
+        "attributes": {
+            "description": "Figure 1 - KNeighborsClassifier - Correlation Among Features",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "KNeighborsClassifier_-_Correlation_Among_Features.png",
+            "format": ".png",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-774698409",
+        "attributes": {
+            "description": "Figure 2 - KNeighborsClassifier - Selecting a Classification Model",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "KNeighborsClassifier_-_Selecting_a_Classification_Model.png",
+            "format": ".png",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-179890259",
+        "attributes": {
+            "description": "Figure 3 - KNeighborsClassifier - Model Evaluation",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "KNeighborsClassifier_-_Model_Evaluation.png",
+            "format": ".png",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-204034865",
+        "attributes": {
+            "description": "Figure 4 - SVC - Model Evaluation (again)",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "SVC_-_Model_Evaluation_(again).png",
+            "format": ".png",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-958588687",
+        "attributes": {
+            "description": "Figure 5 - GradientBoostingClassifier - Reducing Dimensionality",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "GradientBoostingClassifier_-_Reducing_Dimensionality.png",
+            "format": ".png",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-294000469",
+        "attributes": {
+            "description": "CatBoostClassifier",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "CatBoostClassifier.pickle",
+            "format": "pickle",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-432341332",
+        "attributes": {
+            "description": "AdaBoostClassifier",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "AdaBoostClassifier.pickle",
+            "format": "pickle",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-118687092",
+        "attributes": {
+            "description": "GradientBoostingClassifier",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "GradientBoostingClassifier.pickle",
+            "format": "pickle",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-44236696",
+        "attributes": {
+            "description": "DecisionTreeClassifier",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "DecisionTreeClassifier.pickle",
+            "format": "pickle",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-229025064",
+        "attributes": {
+            "description": "KNeighborsClassifier",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "KNeighborsClassifier.pickle",
+            "format": "pickle",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-326373120",
+        "attributes": {
+            "description": "LGBMClassifier",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "LGBMClassifier.pickle",
+            "format": "pickle",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-328857930",
+        "attributes": {
+            "description": "SVC",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "SVC.pickle",
+            "format": "pickle",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-422241352",
+        "attributes": {
+            "description": "XGBClassifier",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "XGBClassifier.pickle",
+            "format": "pickle",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "UsedData",
+        "guid": "-207613954",
+        "attributes": {
+            "description": "RandomForestClassifier",
+            "producer": {
+                "guid": "-577328530"
+            },
+            "document": "RandomForestClassifier.pickle",
+            "format": "pickle",
+            "size": null,
+            "storageLocation": null
+        }
+    },
+    {
+        "typeName": "Action",
+        "guid": "-463259411",
+        "attributes": {
+            "description": "Notebook student-performance-analysis.ipynb v1",
+            "status": "Completed",
+            "inputData": [
+                "Student_performance_data _.csv"
+            ],
+            "outputData": "student-performance-analysis.ipynb",
+            "iteration": {
+                "guid": "-820672525"
+            },
+            "madeBy": [
+                {
+                    "guid": "-577328530"
+                }
+            ],
+            "inputs": [
+                {
+                    "guid": "-661775646"
+                }
+            ],
+            "outputs": [
+                {
+                    "guid": "-56558087"
+                },
+                {
+                    "guid": "-838637192"
+                },
+                {
+                    "guid": "-774698409"
+                },
+                {
+                    "guid": "-179890259"
+                },
+                {
+                    "guid": "-204034865"
+                },
+                {
+                    "guid": "-958588687"
+                },
+                {
+                    "guid": "-294000469"
+                },
+                {
+                    "guid": "-432341332"
+                },
+                {
+                    "guid": "-118687092"
+                },
+                {
+                    "guid": "-44236696"
+                },
+                {
+                    "guid": "-229025064"
+                },
+                {
+                    "guid": "-326373120"
+                },
+                {
+                    "guid": "-328857930"
+                },
+                {
+                    "guid": "-422241352"
+                },
+                {
+                    "guid": "-207613954"
+                }
+            ]
+        }
+    },
+    {
+        "typeName": "Consensus",
+        "guid": "-5996619",
+        "attributes": {
+            "createdBy": {
+                "guid": "-577328530"
+            },
+            "result": "Approved",
+            "action": {
+                "guid": "-463259411",
+                "typeName": "Action"
+            }
+        }
+    }
+]

@@ -1,0 +1,23 @@
+{
+  "id": "aremoto/retail-sales-forecast",
+  "id_no": 709370,
+  "title": "Retail sales forecast",
+  "code_file": "retail-sales-forecast.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "data visualization",
+    "finance",
+    "business"
+  ],
+  "dataset_sources": [
+    "manjeetsingh/retaildataset"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}

@@ -1,0 +1,69 @@
+{
+  "dataset_info": {
+    "dataset_name": "Retail Data Analytics",
+    "subtitle": "Historical sales data from 45 stores",
+    "description": "",
+    "license": "CC0: Public Domain",
+    "author": "Manjeet Singh",
+    "kaggle_id": "manjeetsingh/retaildataset",
+    "kaggle_url": "https://www.kaggle.com/datasets/manjeetsingh/retaildataset",
+    "total_downloads": 97875,
+    "votes": 1082,
+    "is_private": false,
+    "is_featured": false,
+    "usability_rating": null,
+    "download_date": "2025-08-16",
+    "creation_date": "Not available",
+    "last_updated": "Not available"
+  },
+  "reliability_assessment": {
+    "1_author_info": {
+      "author": "Manjeet Singh",
+      "statistics": {
+        "total_datasets": 1,
+        "total_notebooks": 37,
+        "total_dataset_downloads": 97875,
+        "total_dataset_votes": 1082,
+        "total_notebook_votes": 0,
+        "follower_count": "Not available",
+        "following_count": "Not available",
+        "author_tier": "Not available",
+        "avg_downloads_per_dataset": 97875.0,
+        "avg_votes_per_dataset": 1082.0
+      },
+      "assessment": "✓ Available"
+    },
+    "2_publication_date": {
+      "creation_date": "Not available",
+      "last_updated": "Not available",
+      "assessment": "⚠ Temporal information not available"
+    },
+    "3_license": {
+      "license": "CC0: Public Domain",
+      "assessment": "✓ License: CC0: Public Domain"
+    },
+    "4_external_source": {
+      "description": "",
+      "assessment": "⚠ No detailed description"
+    },
+    "5_traceability": {
+      "versions": {
+        "error": "Version information not available"
+      },
+      "assessment": "⚠ No version information"
+    },
+    "6_description": {
+      "title": "Retail Data Analytics",
+      "subtitle": "Historical sales data from 45 stores",
+      "description": "",
+      "assessment": "✓ Clear title and subtitle"
+    },
+    "7_community_feedback": {
+      "votes": 1082,
+      "downloads": 97875,
+      "total_notebooks": 89,
+      "featured": false,
+      "assessment": "✓ 1082 votes, 97875 downloads"
+    }
+  }
+}

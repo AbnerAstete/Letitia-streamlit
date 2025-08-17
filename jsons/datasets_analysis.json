@@ -1,0 +1,444 @@
+{
+  "directory": "datasets",
+  "analysis_timestamp": "2025-08-15T19:58:22.124915",
+  "csv_files_found": 1,
+  "total_directory_size_mb": 0.16,
+  "files_analysis": {
+    "Student_performance_data _.csv": {
+      "filename": "Student_performance_data _.csv",
+      "file_path": "datasets/Student_performance_data _.csv",
+      "analysis_timestamp": "2025-08-15T19:58:22.125324",
+      "file_exists": true,
+      "file_info": {
+        "size_bytes": 166901,
+        "size_mb": 0.16,
+        "creation_time": "2025-08-15T19:58:05.585110",
+        "modification_time": "2025-08-15T19:58:05.585110",
+        "extension": ".csv"
+      },
+      "csv_schema": {
+        "total_rows": 2392,
+        "total_columns": 15,
+        "columns": [
+          "StudentID",
+          "Age",
+          "Gender",
+          "Ethnicity",
+          "ParentalEducation",
+          "StudyTimeWeekly",
+          "Absences",
+          "Tutoring",
+          "ParentalSupport",
+          "Extracurricular",
+          "Sports",
+          "Music",
+          "Volunteering",
+          "GPA",
+          "GradeClass"
+        ],
+        "column_types": {
+          "StudentID": "int64",
+          "Age": "int64",
+          "Gender": "int64",
+          "Ethnicity": "int64",
+          "ParentalEducation": "int64",
+          "StudyTimeWeekly": "float64",
+          "Absences": "int64",
+          "Tutoring": "int64",
+          "ParentalSupport": "int64",
+          "Extracurricular": "int64",
+          "Sports": "int64",
+          "Music": "int64",
+          "Volunteering": "int64",
+          "GPA": "float64",
+          "GradeClass": "float64"
+        },
+        "memory_usage_mb": 0.27,
+        "shape": [
+          2392,
+          15
+        ]
+      },
+      "data_quality": {
+        "null_values_per_column": {
+          "StudentID": 0,
+          "Age": 0,
+          "Gender": 0,
+          "Ethnicity": 0,
+          "ParentalEducation": 0,
+          "StudyTimeWeekly": 0,
+          "Absences": 0,
+          "Tutoring": 0,
+          "ParentalSupport": 0,
+          "Extracurricular": 0,
+          "Sports": 0,
+          "Music": 0,
+          "Volunteering": 0,
+          "GPA": 0,
+          "GradeClass": 0
+        },
+        "null_percentage_per_column": {
+          "StudentID": 0.0,
+          "Age": 0.0,
+          "Gender": 0.0,
+          "Ethnicity": 0.0,
+          "ParentalEducation": 0.0,
+          "StudyTimeWeekly": 0.0,
+          "Absences": 0.0,
+          "Tutoring": 0.0,
+          "ParentalSupport": 0.0,
+          "Extracurricular": 0.0,
+          "Sports": 0.0,
+          "Music": 0.0,
+          "Volunteering": 0.0,
+          "GPA": 0.0,
+          "GradeClass": 0.0
+        },
+        "total_null_values": 0,
+        "duplicate_rows": 0,
+        "unique_values_per_column": {
+          "StudentID": 2392,
+          "Age": 4,
+          "Gender": 2,
+          "Ethnicity": 4,
+          "ParentalEducation": 5,
+          "StudyTimeWeekly": 2392,
+          "Absences": 30,
+          "Tutoring": 2,
+          "ParentalSupport": 5,
+          "Extracurricular": 2,
+          "Sports": 2,
+          "Music": 2,
+          "Volunteering": 2,
+          "GPA": 2371,
+          "GradeClass": 5
+        },
+        "completeness_score": 100.0
+      },
+      "errors": [],
+      "sample_data": {
+        "StudentID": {
+          "first_values": [
+            1001,
+            1002,
+            1003
+          ],
+          "unique_count": 2392,
+          "has_nulls": false
+        },
+        "Age": {
+          "first_values": [
+            17,
+            18,
+            15
+          ],
+          "unique_count": 4,
+          "has_nulls": false
+        },
+        "Gender": {
+          "first_values": [
+            1,
+            0,
+            0
+          ],
+          "unique_count": 2,
+          "has_nulls": false
+        },
+        "Ethnicity": {
+          "first_values": [
+            0,
+            0,
+            2
+          ],
+          "unique_count": 4,
+          "has_nulls": false
+        },
+        "ParentalEducation": {
+          "first_values": [
+            2,
+            1,
+            3
+          ],
+          "unique_count": 5,
+          "has_nulls": false
+        },
+        "StudyTimeWeekly": {
+          "first_values": [
+            19.833722807854716,
+            15.40875605584674,
+            4.21056976881226
+          ],
+          "unique_count": 2392,
+          "has_nulls": false
+        },
+        "Absences": {
+          "first_values": [
+            7,
+            0,
+            26
+          ],
+          "unique_count": 30,
+          "has_nulls": false
+        },
+        "Tutoring": {
+          "first_values": [
+            1,
+            0,
+            0
+          ],
+          "unique_count": 2,
+          "has_nulls": false
+        },
+        "ParentalSupport": {
+          "first_values": [
+            2,
+            1,
+            2
+          ],
+          "unique_count": 5,
+          "has_nulls": false
+        },
+        "Extracurricular": {
+          "first_values": [
+            0,
+            0,
+            0
+          ],
+          "unique_count": 2,
+          "has_nulls": false
+        },
+        "Sports": {
+          "first_values": [
+            0,
+            0,
+            0
+          ],
+          "unique_count": 2,
+          "has_nulls": false
+        },
+        "Music": {
+          "first_values": [
+            1,
+            0,
+            0
+          ],
+          "unique_count": 2,
+          "has_nulls": false
+        },
+        "Volunteering": {
+          "first_values": [
+            0,
+            0,
+            0
+          ],
+          "unique_count": 2,
+          "has_nulls": false
+        },
+        "GPA": {
+          "first_values": [
+            2.929195591667681,
+            3.042914833436377,
+            0.1126022544661815
+          ],
+          "unique_count": 2371,
+          "has_nulls": false
+        },
+        "GradeClass": {
+          "first_values": [
+            2.0,
+            1.0,
+            4.0
+          ],
+          "unique_count": 5,
+          "has_nulls": false
+        }
+      },
+      "numeric_statistics": {
+        "StudentID": {
+          "count": 2392.0,
+          "mean": 2196.5,
+          "std": 690.6552444357942,
+          "min": 1001.0,
+          "25%": 1598.75,
+          "50%": 2196.5,
+          "75%": 2794.25,
+          "max": 3392.0
+        },
+        "Age": {
+          "count": 2392.0,
+          "mean": 16.468645484949832,
+          "std": 1.1237983798555635,
+          "min": 15.0,
+          "25%": 15.0,
+          "50%": 16.0,
+          "75%": 17.0,
+          "max": 18.0
+        },
+        "Gender": {
+          "count": 2392.0,
+          "mean": 0.5108695652173914,
+          "std": 0.49998636171459937,
+          "min": 0.0,
+          "25%": 0.0,
+          "50%": 1.0,
+          "75%": 1.0,
+          "max": 1.0
+        },
+        "Ethnicity": {
+          "count": 2392.0,
+          "mean": 0.8775083612040134,
+          "std": 1.0284757758503462,
+          "min": 0.0,
+          "25%": 0.0,
+          "50%": 0.0,
+          "75%": 2.0,
+          "max": 3.0
+        },
+        "ParentalEducation": {
+          "count": 2392.0,
+          "mean": 1.74623745819398,
+          "std": 1.0004110692382895,
+          "min": 0.0,
+          "25%": 1.0,
+          "50%": 2.0,
+          "75%": 2.0,
+          "max": 4.0
+        },
+        "StudyTimeWeekly": {
+          "count": 2392.0,
+          "mean": 9.771991919431738,
+          "std": 5.65277423586027,
+          "min": 0.001056538645936,
+          "25%": 5.043079161539899,
+          "50%": 9.705363212574394,
+          "75%": 14.408409547514031,
+          "max": 19.97809399526153
+        },
+        "Absences": {
+          "count": 2392.0,
+          "mean": 14.54138795986622,
+          "std": 8.467417379917377,
+          "min": 0.0,
+          "25%": 7.0,
+          "50%": 15.0,
+          "75%": 22.0,
+          "max": 29.0
+        },
+        "Tutoring": {
+          "count": 2392.0,
+          "mean": 0.30142140468227424,
+          "std": 0.4589712494146574,
+          "min": 0.0,
+          "25%": 0.0,
+          "50%": 0.0,
+          "75%": 1.0,
+          "max": 1.0
+        },
+        "ParentalSupport": {
+          "count": 2392.0,
+          "mean": 2.1220735785953178,
+          "std": 1.1228128542119167,
+          "min": 0.0,
+          "25%": 1.0,
+          "50%": 2.0,
+          "75%": 3.0,
+          "max": 4.0
+        },
+        "Extracurricular": {
+          "count": 2392.0,
+          "mean": 0.3833612040133779,
+          "std": 0.4863067551542173,
+          "min": 0.0,
+          "25%": 0.0,
+          "50%": 0.0,
+          "75%": 1.0,
+          "max": 1.0
+        },
+        "Sports": {
+          "count": 2392.0,
+          "mean": 0.30351170568561875,
+          "std": 0.45987037509191175,
+          "min": 0.0,
+          "25%": 0.0,
+          "50%": 0.0,
+          "75%": 1.0,
+          "max": 1.0
+        },
+        "Music": {
+          "count": 2392.0,
+          "mean": 0.19690635451505017,
+          "std": 0.39774411290297657,
+          "min": 0.0,
+          "25%": 0.0,
+          "50%": 0.0,
+          "75%": 0.0,
+          "max": 1.0
+        },
+        "Volunteering": {
+          "count": 2392.0,
+          "mean": 0.15719063545150502,
+          "std": 0.3640565177064976,
+          "min": 0.0,
+          "25%": 0.0,
+          "50%": 0.0,
+          "75%": 0.0,
+          "max": 1.0
+        },
+        "GPA": {
+          "count": 2392.0,
+          "mean": 1.9061863027265407,
+          "std": 0.91515582032496,
+          "min": 0.0,
+          "25%": 1.1748034468836228,
+          "50%": 1.8933926937866847,
+          "75%": 2.622216170450785,
+          "max": 4.0
+        },
+        "GradeClass": {
+          "count": 2392.0,
+          "mean": 2.983695652173913,
+          "std": 1.2339075602260843,
+          "min": 0.0,
+          "25%": 2.0,
+          "50%": 4.0,
+          "75%": 4.0,
+          "max": 4.0
+        }
+      },
+      "categorical_analysis": {}
+    }
+  },
+  "summary": {
+    "total_rows": 2392,
+    "total_columns_unique": [
+      "ParentalSupport",
+      "GPA",
+      "ParentalEducation",
+      "Absences",
+      "Volunteering",
+      "Gender",
+      "Sports",
+      "Music",
+      "Ethnicity",
+      "Age",
+      "StudyTimeWeekly",
+      "Extracurricular",
+      "GradeClass",
+      "Tutoring",
+      "StudentID"
+    ],
+    "common_columns": {
+      "StudentID": 1,
+      "Age": 1,
+      "Gender": 1,
+      "Ethnicity": 1,
+      "ParentalEducation": 1,
+      "StudyTimeWeekly": 1,
+      "Absences": 1,
+      "Tutoring": 1,
+      "ParentalSupport": 1,
+      "Extracurricular": 1
+    },
+    "errors": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "datasets": [
+    "Features data set.csv"
+  ],
+  "models": [],
+  "metrics": [],
+  "graphs": [
+    {
+      "name": "Figure 1",
+      "section": "Gain some graphical insight",
+      "model": "Unknown"
+    },
+    {
+      "name": "Figure 2",
+      "section": "Forecast of the total sales volume",
+      "model": "Unknown"
+    },
+    {
+      "name": "Figure 3",
+      "section": "Model definition",
+      "model": "Unknown"
+    },
+    {
+      "name": "Figure 4",
+      "section": "Forecast of the store-wise sales volume",
+      "model": "Unknown"
+    },
+    {
+      "name": "Figure 5",
+      "section": "Look for predictive power from external variables",
+      "model": "Unknown"
+    }
+  ],
+  "sections": [
+    "Import the data",
+    "Merge the data in a unique DataFrame",
+    "Check data and features",
+    "Gain some graphical insight",
+    "Get more insights",
+    "Forecast of the total sales volume",
+    "Model definition",
+    "Forecast of the store-wise sales volume",
+    "Look for predictive power from external variables",
+    "To do next:"
+  ],
+  "id_kernel": "aremoto/retail-sales-forecast/"
+}

@@ -1,0 +1,69 @@
+{
+  "dataset_info": {
+    "dataset_name": "📚 Students Performance Dataset 📚",
+    "subtitle": "Academic Success Factors in High School Students",
+    "description": "",
+    "license": "Attribution 4.0 International (CC BY 4.0)",
+    "author": "Rabie El Kharoua",
+    "kaggle_id": "rabieelkharoua/students-performance-dataset",
+    "kaggle_url": "https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset",
+    "total_downloads": 55466,
+    "votes": 731,
+    "is_private": false,
+    "is_featured": false,
+    "usability_rating": null,
+    "download_date": "2025-08-15",
+    "creation_date": "Not available",
+    "last_updated": "Not available"
+  },
+  "reliability_assessment": {
+    "1_author_info": {
+      "author": "Rabie El Kharoua",
+      "statistics": {
+        "total_datasets": 46,
+        "total_notebooks": 10,
+        "total_dataset_downloads": 178158,
+        "total_dataset_votes": 2815,
+        "total_notebook_votes": 0,
+        "follower_count": "Not available",
+        "following_count": "Not available",
+        "author_tier": "Not available",
+        "avg_downloads_per_dataset": 3873.0,
+        "avg_votes_per_dataset": 61.2
+      },
+      "assessment": "✓ Available"
+    },
+    "2_publication_date": {
+      "creation_date": "Not available",
+      "last_updated": "Not available",
+      "assessment": "⚠ Temporal information not available"
+    },
+    "3_license": {
+      "license": "Attribution 4.0 International (CC BY 4.0)",
+      "assessment": "✓ License: Attribution 4.0 International (CC BY 4.0)"
+    },
+    "4_external_source": {
+      "description": "",
+      "assessment": "⚠ No detailed description"
+    },
+    "5_traceability": {
+      "versions": {
+        "error": "Version information not available"
+      },
+      "assessment": "⚠ No version information"
+    },
+    "6_description": {
+      "title": "📚 Students Performance Dataset 📚",
+      "subtitle": "Academic Success Factors in High School Students",
+      "description": "",
+      "assessment": "✓ Clear title and subtitle"
+    },
+    "7_community_feedback": {
+      "votes": 731,
+      "downloads": 55466,
+      "featured": false,
+      "total_notebooks": 216,
+      "assessment": "✓ 731 votes, 55466 downloads"
+    }
+  }
+}

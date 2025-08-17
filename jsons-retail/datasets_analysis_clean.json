@@ -1,0 +1,597 @@
+{
+    "files_analysis": {
+        "stores data-set.csv": {
+            "filename": "stores data-set.csv",
+            "file_path": "datasets/stores data-set.csv",
+            "analysis_timestamp": "2025-08-16T21:37:08.148053",
+            "file_exists": true,
+            "file_info": {
+                "size_bytes": 577,
+                "size_mb": 0.0,
+                "creation_time": "2025-08-16T21:32:52.099329",
+                "modification_time": "2025-08-16T21:32:52.099329",
+                "extension": ".csv"
+            },
+            "csv_schema": {
+                "total_rows": 45,
+                "total_columns": 3,
+                "columns": [
+                    "Store",
+                    "Type",
+                    "Size"
+                ],
+                "column_types": {
+                    "Store": "int64",
+                    "Type": "object",
+                    "Size": "int64"
+                },
+                "memory_usage_mb": 0.0,
+                "shape": [
+                    45,
+                    3
+                ]
+            },
+            "data_quality": {
+                "null_values_per_column": {
+                    "Store": 0,
+                    "Type": 0,
+                    "Size": 0
+                },
+                "null_percentage_per_column": {
+                    "Store": 0.0,
+                    "Type": 0.0,
+                    "Size": 0.0
+                },
+                "total_null_values": 0,
+                "duplicate_rows": 0,
+                "unique_values_per_column": {
+                    "Store": 45,
+                    "Type": 3,
+                    "Size": 40
+                },
+                "completeness_score": 100.0
+            },
+            "errors": [],
+            "sample_data": {
+                "Store": {
+                    "first_values": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "unique_count": 45,
+                    "has_nulls": false
+                },
+                "Type": {
+                    "first_values": [
+                        "A",
+                        "A",
+                        "B"
+                    ],
+                    "unique_count": 3,
+                    "has_nulls": false
+                },
+                "Size": {
+                    "first_values": [
+                        151315,
+                        202307,
+                        37392
+                    ],
+                    "unique_count": 40,
+                    "has_nulls": false
+                }
+            },
+            "numeric_statistics": {
+                "Store": {
+                    "count": 45.0,
+                    "mean": 23.0,
+                    "std": 13.133925536563698,
+                    "min": 1.0,
+                    "25%": 12.0,
+                    "50%": 23.0,
+                    "75%": 34.0,
+                    "max": 45.0
+                },
+                "Size": {
+                    "count": 45.0,
+                    "mean": 130287.6,
+                    "std": 63825.271991159236,
+                    "min": 34875.0,
+                    "25%": 70713.0,
+                    "50%": 126512.0,
+                    "75%": 202307.0,
+                    "max": 219622.0
+                }
+            },
+            "categorical_analysis": {
+                "Type": {
+                    "top_5_values": {
+                        "A": 22,
+                        "B": 17,
+                        "C": 6
+                    },
+                    "unique_count": 3,
+                    "most_frequent": "A"
+                }
+            }
+        },
+        "sales data-set.csv": {
+            "filename": "sales data-set.csv",
+            "file_path": "datasets/sales data-set.csv",
+            "analysis_timestamp": "2025-08-16T21:37:08.188350",
+            "file_exists": true,
+            "file_info": {
+                "size_bytes": 13264115,
+                "size_mb": 12.65,
+                "creation_time": "2025-08-16T21:32:52.098329",
+                "modification_time": "2025-08-16T21:32:52.098329",
+                "extension": ".csv"
+            },
+            "csv_schema": {
+                "total_rows": 421570,
+                "total_columns": 5,
+                "columns": [
+                    "Store",
+                    "Dept",
+                    "Date",
+                    "Weekly_Sales",
+                    "IsHoliday"
+                ],
+                "column_types": {
+                    "Store": "int64",
+                    "Dept": "int64",
+                    "Date": "object",
+                    "Weekly_Sales": "float64",
+                    "IsHoliday": "bool"
+                },
+                "memory_usage_mb": 36.99,
+                "shape": [
+                    421570,
+                    5
+                ]
+            },
+            "data_quality": {
+                "null_values_per_column": {
+                    "Store": 0,
+                    "Dept": 0,
+                    "Date": 0,
+                    "Weekly_Sales": 0,
+                    "IsHoliday": 0
+                },
+                "null_percentage_per_column": {
+                    "Store": 0.0,
+                    "Dept": 0.0,
+                    "Date": 0.0,
+                    "Weekly_Sales": 0.0,
+                    "IsHoliday": 0.0
+                },
+                "total_null_values": 0,
+                "duplicate_rows": 0,
+                "unique_values_per_column": {
+                    "Store": 45,
+                    "Dept": 81,
+                    "Date": 143,
+                    "Weekly_Sales": 359464,
+                    "IsHoliday": 2
+                },
+                "completeness_score": 100.0
+            },
+            "errors": [],
+            "sample_data": {
+                "Store": {
+                    "first_values": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "unique_count": 45,
+                    "has_nulls": false
+                },
+                "Dept": {
+                    "first_values": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "unique_count": 81,
+                    "has_nulls": false
+                },
+                "Date": {
+                    "first_values": [
+                        "05/02/2010",
+                        "12/02/2010",
+                        "19/02/2010"
+                    ],
+                    "unique_count": 143,
+                    "has_nulls": false
+                },
+                "Weekly_Sales": {
+                    "first_values": [
+                        24924.5,
+                        46039.49,
+                        41595.55
+                    ],
+                    "unique_count": 359464,
+                    "has_nulls": false
+                },
+                "IsHoliday": {
+                    "first_values": [
+                        false,
+                        true,
+                        false
+                    ],
+                    "unique_count": 2,
+                    "has_nulls": false
+                }
+            },
+            "numeric_statistics": {
+                "Store": {
+                    "count": 421570.0,
+                    "mean": 22.200545579619043,
+                    "std": 12.785297389901771,
+                    "min": 1.0,
+                    "25%": 11.0,
+                    "50%": 22.0,
+                    "75%": 33.0,
+                    "max": 45.0
+                },
+                "Dept": {
+                    "count": 421570.0,
+                    "mean": 44.26031738501317,
+                    "std": 30.492054015760527,
+                    "min": 1.0,
+                    "25%": 18.0,
+                    "50%": 37.0,
+                    "75%": 74.0,
+                    "max": 99.0
+                },
+                "Weekly_Sales": {
+                    "count": 421570.0,
+                    "mean": 15981.25812346704,
+                    "std": 22711.18351916313,
+                    "min": -4988.94,
+                    "25%": 2079.6499999999996,
+                    "50%": 7612.03,
+                    "75%": 20205.8525,
+                    "max": 693099.36
+                }
+            },
+            "categorical_analysis": {
+                "Date": {
+                    "top_5_values": {
+                        "23/12/2011": 3027,
+                        "25/11/2011": 3021,
+                        "16/12/2011": 3013,
+                        "09/12/2011": 3010,
+                        "17/02/2012": 3007
+                    },
+                    "unique_count": 143,
+                    "most_frequent": "23/12/2011"
+                }
+            }
+        },
+        "clean_Features data set.csv": {
+            "filename": "clean_Features data set.csv",
+            "file_path": "datasets/cleaned/clean_Features data set.csv",
+            "analysis_timestamp": "2025-08-16T21:42:44.563651",
+            "file_exists": true,
+            "file_info": {
+                "size_bytes": 762222,
+                "size_mb": 0.73,
+                "creation_time": "2025-08-16T21:42:44.562625",
+                "modification_time": "2025-08-16T21:42:44.562625",
+                "extension": ".csv"
+            },
+            "csv_schema": {
+                "total_rows": 8190,
+                "total_columns": 12,
+                "columns": [
+                    "Store",
+                    "Date",
+                    "Temperature",
+                    "Fuel_Price",
+                    "MarkDown1",
+                    "MarkDown2",
+                    "MarkDown3",
+                    "MarkDown4",
+                    "MarkDown5",
+                    "CPI",
+                    "Unemployment",
+                    "IsHoliday"
+                ],
+                "column_types": {
+                    "Store": "float64",
+                    "Date": "object",
+                    "Temperature": "float64",
+                    "Fuel_Price": "float64",
+                    "MarkDown1": "float64",
+                    "MarkDown2": "float64",
+                    "MarkDown3": "float64",
+                    "MarkDown4": "float64",
+                    "MarkDown5": "float64",
+                    "CPI": "float64",
+                    "Unemployment": "float64",
+                    "IsHoliday": "bool"
+                },
+                "memory_usage_mb": 1.16,
+                "shape": [
+                    8190,
+                    12
+                ]
+            },
+            "data_quality": {
+                "null_values_per_column": {
+                    "Store": 0,
+                    "Date": 0,
+                    "Temperature": 0,
+                    "Fuel_Price": 0,
+                    "MarkDown1": 0,
+                    "MarkDown2": 0,
+                    "MarkDown3": 0,
+                    "MarkDown4": 0,
+                    "MarkDown5": 0,
+                    "CPI": 0,
+                    "Unemployment": 0,
+                    "IsHoliday": 0
+                },
+                "null_percentage_per_column": {
+                    "Store": 0.0,
+                    "Date": 0.0,
+                    "Temperature": 0.0,
+                    "Fuel_Price": 0.0,
+                    "MarkDown1": 0.0,
+                    "MarkDown2": 0.0,
+                    "MarkDown3": 0.0,
+                    "MarkDown4": 0.0,
+                    "MarkDown5": 0.0,
+                    "CPI": 0.0,
+                    "Unemployment": 0.0,
+                    "IsHoliday": 0.0
+                },
+                "total_null_values": 0,
+                "duplicate_rows": 0,
+                "unique_values_per_column": {
+                    "Store": 41,
+                    "Date": 182,
+                    "Temperature": 3628,
+                    "Fuel_Price": 878,
+                    "MarkDown1": 3211,
+                    "MarkDown2": 2038,
+                    "MarkDown3": 2327,
+                    "MarkDown4": 2638,
+                    "MarkDown5": 3228,
+                    "CPI": 2192,
+                    "Unemployment": 368,
+                    "IsHoliday": 2
+                },
+                "completeness_score": 100.0
+            },
+            "errors": [],
+            "sample_data": {
+                "Store": {
+                    "first_values": [
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "unique_count": 41,
+                    "has_nulls": false
+                },
+                "Date": {
+                    "first_values": [
+                        "05/02/2010",
+                        "12/02/2010",
+                        "19/02/2010"
+                    ],
+                    "unique_count": 182,
+                    "has_nulls": false
+                },
+                "Temperature": {
+                    "first_values": [
+                        42.31,
+                        38.51,
+                        39.93
+                    ],
+                    "unique_count": 3628,
+                    "has_nulls": false
+                },
+                "Fuel_Price": {
+                    "first_values": [
+                        2.669,
+                        2.669,
+                        2.669
+                    ],
+                    "unique_count": 878,
+                    "has_nulls": false
+                },
+                "MarkDown1": {
+                    "first_values": [
+                        4743.58,
+                        4743.58,
+                        4743.58
+                    ],
+                    "unique_count": 3211,
+                    "has_nulls": false
+                },
+                "MarkDown2": {
+                    "first_values": [
+                        364.57,
+                        364.57,
+                        364.57
+                    ],
+                    "unique_count": 2038,
+                    "has_nulls": false
+                },
+                "MarkDown3": {
+                    "first_values": [
+                        36.26,
+                        36.26,
+                        36.26
+                    ],
+                    "unique_count": 2327,
+                    "has_nulls": false
+                },
+                "MarkDown4": {
+                    "first_values": [
+                        1176.425,
+                        1176.425,
+                        1176.425
+                    ],
+                    "unique_count": 2638,
+                    "has_nulls": false
+                },
+                "MarkDown5": {
+                    "first_values": [
+                        2727.135,
+                        2727.135,
+                        2727.135
+                    ],
+                    "unique_count": 3228,
+                    "has_nulls": false
+                },
+                "CPI": {
+                    "first_values": [
+                        211.0963582,
+                        211.2421698,
+                        211.2891429
+                    ],
+                    "unique_count": 2192,
+                    "has_nulls": false
+                },
+                "Unemployment": {
+                    "first_values": [
+                        8.106,
+                        8.106,
+                        8.106
+                    ],
+                    "unique_count": 368,
+                    "has_nulls": false
+                },
+                "IsHoliday": {
+                    "first_values": [
+                        false,
+                        true,
+                        false
+                    ],
+                    "unique_count": 2,
+                    "has_nulls": false
+                }
+            },
+            "numeric_statistics": {
+                "Store": {
+                    "count": 8190.0,
+                    "mean": 23.0,
+                    "std": 12.772275812466734,
+                    "min": 3.0,
+                    "25%": 12.0,
+                    "50%": 23.0,
+                    "75%": 34.0,
+                    "max": 43.0
+                },
+                "Temperature": {
+                    "count": 8190.0,
+                    "mean": 59.47385958485959,
+                    "std": 17.729667513459162,
+                    "min": 26.849,
+                    "25%": 45.902499999999996,
+                    "50%": 60.71,
+                    "75%": 73.88,
+                    "max": 87.13099999999999
+                },
+                "Fuel_Price": {
+                    "count": 8190.0,
+                    "mean": 3.4035175824175825,
+                    "std": 0.4168553863287168,
+                    "min": 2.669,
+                    "25%": 3.041,
+                    "50%": 3.513,
+                    "75%": 3.743,
+                    "max": 4.021
+                },
+                "MarkDown1": {
+                    "count": 8190.0,
+                    "mean": 5243.223784493286,
+                    "std": 3339.233907098194,
+                    "min": 292.4915,
+                    "25%": 4743.58,
+                    "50%": 4743.58,
+                    "75%": 4743.58,
+                    "max": 14654.592
+                },
+                "MarkDown2": {
+                    "count": 8190.0,
+                    "mean": 770.3778015873012,
+                    "std": 1343.733074627189,
+                    "min": 18.949,
+                    "25%": 364.57,
+                    "50%": 364.57,
+                    "75%": 364.57,
+                    "max": 5708.130499999993
+                },
+                "MarkDown3": {
+                    "count": 8190.0,
+                    "mean": 72.11113736263735,
+                    "std": 112.89103375948271,
+                    "min": 2.16,
+                    "25%": 36.26,
+                    "50%": 36.26,
+                    "75%": 36.26,
+                    "max": 471.3194999999998
+                },
+                "MarkDown4": {
+                    "count": 8190.0,
+                    "mean": 1563.8997197802196,
+                    "std": 1505.4620977325496,
+                    "min": 65.284,
+                    "25%": 1176.425,
+                    "50%": 1176.425,
+                    "75%": 1176.425,
+                    "max": 6595.290499999997
+                },
+                "MarkDown5": {
+                    "count": 8190.0,
+                    "mean": 3032.9251123321123,
+                    "std": 1596.6385991840853,
+                    "min": 819.0500000000001,
+                    "25%": 2727.135,
+                    "50%": 2727.135,
+                    "75%": 2727.135,
+                    "max": 7606.580999999997
+                },
+                "CPI": {
+                    "count": 8190.0,
+                    "mean": 173.1144922085592,
+                    "std": 38.23023178470411,
+                    "min": 126.6034839,
+                    "25%": 132.6537742,
+                    "50%": 182.7640032,
+                    "75%": 212.76699449999998,
+                    "max": 223.82157018
+                },
+                "Unemployment": {
+                    "count": 8190.0,
+                    "mean": 7.745557387057387,
+                    "std": 1.4131888554112255,
+                    "min": 5.217,
+                    "25%": 6.833,
+                    "50%": 7.806,
+                    "75%": 8.519,
+                    "max": 10.926
+                }
+            },
+            "categorical_analysis": {
+                "Date": {
+                    "top_5_values": {
+                        "05/02/2010": 45,
+                        "12/02/2010": 45,
+                        "19/02/2010": 45,
+                        "26/02/2010": 45,
+                        "05/03/2010": 45
+                    },
+                    "unique_count": 182,
+                    "most_frequent": "05/02/2010"
+                }
+            }
+        }
+    }
+}

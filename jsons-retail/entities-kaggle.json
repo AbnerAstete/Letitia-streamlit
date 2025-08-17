@@ -1,0 +1,54 @@
+{
+    "Project": {
+        "title": "Retail sales forecast",
+        "keywords": [
+            "data visualization",
+            "finance",
+            "business"
+        ]
+    },
+    "Owner": {
+        "name": "aremoto"
+    },
+    "Notebook": {
+        "file": "retail-sales-forecast.ipynb"
+    },
+    "File": [
+        {
+            "name": "Features data set.csv",
+            "path": "kaggle_notebooks/aremoto_retail-sales-forecast_/datasets/default/Features data set.csv",
+            "totalbytes": 600478
+        },
+        {
+            "name": "sales data-set.csv",
+            "path": "kaggle_notebooks/aremoto_retail-sales-forecast_/datasets/default/sales data-set.csv",
+            "totalbytes": 13264115
+        },
+        {
+            "name": "stores data-set.csv",
+            "path": "kaggle_notebooks/aremoto_retail-sales-forecast_/datasets/default/stores data-set.csv",
+            "totalbytes": 577
+        }
+    ],
+    "DataSets": [
+        {
+            "title": "Retail Data Analytics - Historical sales data from 45 stores"
+        }
+    ],
+    "Log": {
+        "filename": "retail-sales-forecast.log",
+        "filepath": "/content/kaggle_notebooks/aremoto_retail-sales-forecast_/outputs/retail-sales-forecast.log",
+        "total_bytes": 1137
+    },
+    "Model": [],
+    "CodeLine": {
+        "graphs": [
+            "Figure 1 - Unknown - Gain some graphical insight",
+            "Figure 2 - Unknown - Forecast of the total sales volume",
+            "Figure 3 - Unknown - Model definition",
+            "Figure 4 - Unknown - Forecast of the store-wise sales volume",
+            "Figure 5 - Unknown - Look for predictive power from external variables"
+        ],
+        "models": []
+    }
+}

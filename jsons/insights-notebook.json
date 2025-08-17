@@ -1,0 +1,60 @@
+{
+  "datasets": [],
+  "models": [
+    "CatBoostClassifier",
+    "AdaBoostClassifier",
+    "GradientBoostingClassifier",
+    "DecisionTreeClassifier",
+    "KNeighborsClassifier",
+    "LGBMClassifier",
+    "SVC",
+    "XGBClassifier",
+    "RandomForestClassifier"
+  ],
+  "metrics": [
+    "confusion_matrix",
+    "accuracy_score"
+  ],
+  "graphs": [
+    {
+      "name": "Figure 1",
+      "section": "Correlation Among Features",
+      "model": "KNeighborsClassifier"
+    },
+    {
+      "name": "Figure 2",
+      "section": "Selecting a Classification Model",
+      "model": "KNeighborsClassifier"
+    },
+    {
+      "name": "Figure 3",
+      "section": "Model Evaluation",
+      "model": "KNeighborsClassifier"
+    },
+    {
+      "name": "Figure 4",
+      "section": "Model Evaluation (again)",
+      "model": "SVC"
+    },
+    {
+      "name": "Figure 5",
+      "section": "Reducing Dimensionality",
+      "model": "GradientBoostingClassifier"
+    }
+  ],
+  "sections": [
+    "Import dataset",
+    "Feature Distribution",
+    "Define Categorical and Numerical Features",
+    "Encode Categorical Features and Scale Numerical Features",
+    "Correlation Among Features",
+    "Split the Dataset",
+    "Feature Importance",
+    "Selecting a Classification Model",
+    "Model Evaluation",
+    "Hyperparameter Tuning",
+    "Model Evaluation (again)",
+    "Reducing Dimensionality"
+  ],
+  "id_kernel": "joelknapp/student-performance-analysis/"
+}

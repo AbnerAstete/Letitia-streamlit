@@ -1,0 +1,19 @@
+{
+  "file_info": {
+    "filename": "retail-sales-forecast.log",
+    "filepath": "/content/kaggle_notebooks/aremoto_retail-sales-forecast_/outputs/retail-sales-forecast.log",
+    "created_at": "2025-08-16T20:49:04.817189",
+    "num_lines": 17,
+    "encoding": "ascii",
+    "total_bytes": 1137
+  },
+  "dataset_info": {
+    "dtypes": {}
+  },
+  "models": [],
+  "execution_time": {
+    "start": 3.751049963000696,
+    "end": 116.11501800600672,
+    "duration_seconds": 112.364
+  }
+}

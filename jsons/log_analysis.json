@@ -1,0 +1,19 @@
+{
+  "file_info": {
+    "filename": "student-performance-analysis.log",
+    "filepath": "/kaggle_notebooks/joelknapp_student-performance-analysis_/outputs/student-performance-analysis.log",
+    "created_at": "2025-08-16T08:10:02.898361",
+    "num_lines": 13,
+    "encoding": "ascii",
+    "total_bytes": 1573
+  },
+  "dataset_info": {
+    "dtypes": {}
+  },
+  "models": [],
+  "execution_time": {
+    "start": 1.845849586,
+    "end": 2.900014631,
+    "duration_seconds": 1.054
+  }
+}
