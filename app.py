@@ -555,7 +555,7 @@ elif selected_key == "Retail Data Analytics":
         unsafe_allow_html=True
     )
 
-    st.image("images/step2.svg", caption=" Metadata Extraction")
+    # st.image("images/step2.svg", caption=" Metadata Extraction")
 
     # Cargar metadata desde el JSON
     json_retil_metadata_path = "jsons-retail/kernel-metadata.json"
@@ -717,7 +717,7 @@ elif selected_key == "Retail Data Analytics":
         are then ready for ingestion into the ATLAS metadata management system.
     """)
 
-    # st.image("images/step3.svg", caption="Data Pipeline Steps")
+    st.image("images/step3.svg", caption="Data Pipeline Steps")
 
 
     st.markdown("""
