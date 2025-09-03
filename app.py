@@ -717,10 +717,8 @@ elif selected_key == "Retail Data Analytics":
         are then ready for ingestion into the ATLAS metadata management system.
     """)
 
-    st.image("images/step3.svg", caption="Data Pipeline Steps")
+    # st.image("images/step3.svg", caption="Data Pipeline Steps")
 
-    # image_rpcm = Image.open("images/Metamodelo-Atlas.png")
-    # st.image(image_rpcm, caption="Research Processes Curation Metamodel (RPCM)", use_column_width=True)
 
     st.markdown("""
     When metadata is taken from Kaggle (information about datasets, notebooks, models, and results), it arrives in a raw and fragmented form. To make this information useful for research management, it is transformed into structured entities that can be stored in the metadata system.
