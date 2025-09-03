@@ -6,8 +6,8 @@ from datetime import datetime
 from kaggle.api.kaggle_api_extended import KaggleApi
 import pandas as pd
 
-from util_analysis import show_csv_metadata_from_json_path,plot_boxplots_streamlit,plot_histograms_streamlit,taxonomy_queries_section_analysis_project, plot_histograms
-from util_retail import show_csv_metadata_from_json_path_retail, taxonomy_queries_section_retail
+from util_analysis import show_csv_metadata_from_json_path,plot_boxplots_streamlit,plot_histograms_streamlit,taxonomy_queries_section_analysis_project
+from util_retail import show_csv_metadata_from_json_path_retail, taxonomy_queries_section_retail, plot
 
 # os.environ["KAGGLE_USERNAME"] = st.secrets["KAGGLE_USERNAME"]
 # os.environ["KAGGLE_KEY"] = st.secrets["KAGGLE_KEY"]
@@ -516,7 +516,7 @@ elif selected_key == "Retail Data Analytics":
         st.markdown("### 📊 Plots")
         tab1, tab2 = st.tabs(["Histograms", "Boxplots"])
         with tab1:
-            plot_histograms(file_data, group_size=4)
+            plot(file_data, group_size=4)
         with tab2:
             plot_boxplots_streamlit(file_data, group_size=4)
 
