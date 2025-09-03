@@ -6,8 +6,8 @@ from datetime import datetime
 from kaggle.api.kaggle_api_extended import KaggleApi
 import pandas as pd
 
-from util_analysis import show_csv_metadata_from_json_path,plot_boxplots_streamlit,plot_histograms_streamlit
-from util_retail import show_csv_metadata_from_json_path_retail
+from util_analysis import show_csv_metadata_from_json_path,plot_boxplots_streamlit,plot_histograms_streamlit,taxonomy_queries_section_analysis
+from util_retail import show_csv_metadata_from_json_path_retail, taxonomy_queries_section_retail
 
 # os.environ["KAGGLE_USERNAME"] = st.secrets["KAGGLE_USERNAME"]
 # os.environ["KAGGLE_KEY"] = st.secrets["KAGGLE_KEY"]
@@ -29,13 +29,16 @@ The standardized pipeline includes:
    completeness, and potential quality issues.
 2. **Metadata Extraction:** Extract metadata from Kaggle and consolidate it into a single JSON file. This unified file serves as the basis for subsequent transformations into the Research Processes Curation Metamodel (RPCM).
 3. **Transformation to RPCM Entities:** Explain how the consolidated JSON is transformed into RPCM  entities, and present the resulting structured output ready for integration into a metadata system.
+4. **Taxonomy Queries:** Validating that the RPCM allows for a comprehensive exploration of research processes.
 """)
 
+st.image("images/steps.svg", caption="Data Pipeline Steps")
+
 # --- Título de la sección de selección ---
-st.markdown("### Select Project:")
+st.markdown("## 📂 Select Project:")
 
 st.markdown("""
-The main difference between the presented projects is that the **"Student Performance Analysis"** project has a fully optimized dataset, so no data cleaning is required. In contrast, the other project contains a dataset that does not meet the quality criteria, so data cleaning will be performed in **Step 1**. 
+The main difference between the presented projects is that the **"Student Performance Analysis"** project has a fully optimized dataset, so no data cleaning is required. In contrast, the **"Retail Data Analytics Project"** contains a dataset that does not meet the quality criteria, so data cleaning will be performed in **Step 1**. 
 
 Subsequently, **Step 2** and **Step 3** are essentially the same, as they are executed through the same pipeline. However, the generated data will still differ, since they belong to different projects.
 """)
@@ -92,6 +95,9 @@ if selected_key == "Student Performance Analysis":
 
             dataset_info = full_evaluation["dataset_info"]
             assessment = full_evaluation["reliability_assessment"]
+
+            st.image("images/step1.svg", caption="Data Quality Assessment Steps")
+
 
             st.markdown(""" ### 🕵️‍♂️ Source Facet """)
             # Información general
@@ -174,6 +180,10 @@ if selected_key == "Student Performance Analysis":
         """,
         unsafe_allow_html=True
     )
+
+
+    st.image("images/step2.svg", caption=" Metadata Extraction")
+
 
     # Cargar metadata desde el JSON
     json_metadata_path = "jsons/kernel-metadata.json"
@@ -300,8 +310,8 @@ if selected_key == "Student Performance Analysis":
         """
     )
 
-    image_kaggle = Image.open("images/kaggle.png")
-    st.image(image_kaggle, caption="Kaggle Metatada Model", use_column_width=True)
+    # image_kaggle = Image.open("images/kaggle.png")
+    # st.image(image_kaggle, caption="Kaggle Metatada Model", use_column_width=True)
 
         
     st.markdown(
@@ -329,17 +339,22 @@ if selected_key == "Student Performance Analysis":
     st.markdown(" ## Step 3: Transformation to RPCM Entities")
 
 
-    st.markdown("""
-    The idea is to translate raw Kaggle information into a standardized structure that can be integrated with broader workflows. This standardization ensures that every project has a clearly defined user, experiment, and execution process, while also documenting how data was used, produced, and approved. The goal is not just to store Kaggle information, but to map it into a structured context, making it traceable.
-    """)
-
-
-    image_rpcm = Image.open("images/Metamodelo-Atlas.png")
-    st.image(image_rpcm, caption="Research Processes Curation Metamodel (RPCM)", use_column_width=True)
 
     st.markdown("""
-    When metadata is taken from Kaggle (information about datasets, notebooks, models, and results), it arrives in a raw and fragmented form. To make this information useful for research management, it is transformed into structured entities that can be stored in the metadata system.
+        At this stage, having consolidated all Kaggle metadata into a unified structure, we apply 
+        specific transformation rules to generate our RPCM entities. These transformed entities 
+        are then ready for ingestion into the ATLAS metadata management system.
+        """)
 
+
+    # image_rpcm = Image.open("images/Metamodelo-Atlas.png")
+    # st.image(image_rpcm, caption="Research Processes Curation Metamodel (RPCM)", use_column_width=True)
+
+    st.image("images/step3.svg", caption="Data Pipeline Steps")
+
+
+    st.markdown("""
+                
     Each entity corresponds to a specific part of the research workflow:
 
     - **User:** Who created the work.  
@@ -360,6 +375,8 @@ if selected_key == "Student Performance Analysis":
     Additionally, some fields can be enriched manually, allowing users to complement the automatically extracted information with more context or specific details.
     """)
 
+
+
     json_entities_RPCM_path = "jsons/entities-bulk-atlas.json"
 
     if os.path.exists(json_entities_RPCM_path):
@@ -370,6 +387,18 @@ if selected_key == "Student Performance Analysis":
             st.json(entities_RPCM_data)
     else:
         st.warning(f"⚠️ File not found: `{json_entities_RPCM_path}`")
+
+    st.markdown(" ## 🔍 Step 4:  Taxonomy Queries")
+
+    taxonomy_queries_section_analysis()
+
+    
+
+    
+
+
+
+
 
 elif selected_key == "Retail Data Analytics":
 
@@ -383,6 +412,8 @@ elif selected_key == "Retail Data Analytics":
 
             dataset_info = full_evaluation["dataset_info"]
             assessment = full_evaluation["reliability_assessment"]
+
+            st.image("images/step1.svg", caption="Data Quality Assessment Steps")
 
             st.markdown(""" ### 🕵️‍♂️ Source Facet """)
             # Información general
@@ -447,8 +478,10 @@ elif selected_key == "Retail Data Analytics":
     }
     }
 
+    st.markdown("### Select a dataset to analyze")
+
     # Selección del dataset
-    selected_dataset_name = st.selectbox(" ### Select a dataset to analyze", list(datasets.keys()))
+    selected_dataset_name = st.selectbox("", list(datasets.keys()))
     dataset = datasets[selected_dataset_name]
     file_data = {"file_path": dataset["file_path"], "filename": selected_dataset_name}
 
@@ -521,6 +554,8 @@ elif selected_key == "Retail Data Analytics":
         """,
         unsafe_allow_html=True
     )
+
+    st.image("images/step2.svg", caption=" Metadata Extraction")
 
     # Cargar metadata desde el JSON
     json_retil_metadata_path = "jsons-retail/kernel-metadata.json"
@@ -647,8 +682,8 @@ elif selected_key == "Retail Data Analytics":
         """
     )
 
-    image_kaggle = Image.open("images/kaggle.png")
-    st.image(image_kaggle, caption="Kaggle Metatada Model", use_column_width=True)
+    # image_kaggle = Image.open("images/kaggle.png")
+    # st.image(image_kaggle, caption="Kaggle Metatada Model")
 
         
     st.markdown(
@@ -677,12 +712,15 @@ elif selected_key == "Retail Data Analytics":
 
 
     st.markdown("""
-    The idea is to translate raw Kaggle information into a standardized structure that can be integrated with broader workflows. This standardization ensures that every project has a clearly defined user, experiment, and execution process, while also documenting how data was used, produced, and approved. The goal is not just to store Kaggle information, but to map it into a structured context, making it traceable.
+        At this stage, having consolidated all Kaggle metadata into a unified structure, we apply 
+        specific transformation rules to generate our RPCM entities. These transformed entities 
+        are then ready for ingestion into the ATLAS metadata management system.
     """)
 
+    st.image("images/step3.svg", caption="Data Pipeline Steps")
 
-    image_rpcm = Image.open("images/Metamodelo-Atlas.png")
-    st.image(image_rpcm, caption="Research Processes Curation Metamodel (RPCM)", use_column_width=True)
+    # image_rpcm = Image.open("images/Metamodelo-Atlas.png")
+    # st.image(image_rpcm, caption="Research Processes Curation Metamodel (RPCM)", use_column_width=True)
 
     st.markdown("""
     When metadata is taken from Kaggle (information about datasets, notebooks, models, and results), it arrives in a raw and fragmented form. To make this information useful for research management, it is transformed into structured entities that can be stored in the metadata system.
@@ -717,3 +755,62 @@ elif selected_key == "Retail Data Analytics":
             st.json(entities_RPCM_data)
     else:
         st.warning(f"⚠️ File not found: `{json_entities_RPCM_path}`")
+
+    st.markdown(" ## 🔍 Step 4:  Taxonomy Queries")
+
+    taxonomy_queries_section_retail()
+
+st.markdown("## 🔗 Google Colab Notebooks")
+    
+st.markdown("""
+Access the complete implementation of each pipeline step through our interactive Google Colab notebooks. 
+These notebooks provide hands-on execution of the data pipeline components described above.
+""")
+
+# Crear dos columnas para los enlaces
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("""
+    ### 📊 Step 1: Data Quality Assessment
+    
+    **Interactive Data Quality Analysis**
+    
+    This notebook implements the data quality assessment framework, including:
+    - Source facet evaluation (reliability, traceability, licensing)
+    - Data facet analysis (completeness, uniqueness, outlier detection)
+    - Quality scoring system with customizable weights
+    - Automated quality reports and visualizations
+    """)
+    
+    st.markdown("""
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="https://colab.research.google.com/drive/1o3isSd9vukGr9Jzf5U0J5-Pi8ikowTuQ?usp=sharing" target="_blank">
+            <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="margin: 10px;">
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    ### 🔄 Steps 2 & 3: Metadata Extraction & RPCM Transformation
+    
+    **End-to-End Pipeline Implementation**
+    
+    This notebook covers the complete transformation pipeline:
+    - Kaggle API integration and metadata extraction
+    - Log analysis and notebook content parsing
+    - Unified entity generation from multiple sources
+    - RPCM entity mapping and transformation
+    - ATLAS-ready JSON generation
+    """)
+    
+    st.markdown("""
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="https://colab.research.google.com/drive/1Lcou4v5vuPIX4fETpnSE-5UlC5VWgO_D?usp=sharing" target="_blank">
+            <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="margin: 10px;">
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
+
+st.divider()

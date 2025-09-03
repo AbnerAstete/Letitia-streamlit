@@ -253,3 +253,127 @@ def plot_boxplots_streamlit(file_data, group_size=4):
         template="plotly_white"
     )
     st.plotly_chart(fig, use_container_width=True)
+
+def taxonomy_queries_section_analysis():
+    """
+    Streamlit section to display taxonomy queries for the 
+    Student Performance Analysis project with interactive interface
+    """
+    
+    st.markdown("""
+    This section presents the taxonomy queries validation phase, executed at the end of our pipeline 
+    on the **Retail Data Analytics** project. These queries demonstrate how the RPCM (Research Process Conceptual Model) 
+    enables comprehensive queries on different aspects of a research project, from organization to validation of results.
+    
+    The following examples show concrete query executions and their results, validating that our model 
+    behaves correctly and performs as expected for this specific project. All queries were constructed 
+    using the **Domain Specific Language (DSL)** that forms the foundational query interface supported by ATLAS.
+    """)
+    
+    st.divider()
+    
+    # Define queries organized by categories - UPDATED WITH REAL JSON DATA
+    queries_data = {
+        "Project and Organizational Queries": {
+            "List project with keywords": {
+                "query": """from Project 
+qualifiedName, keywords""",
+                "result": """qualifiedName = "student-performance-analysis@StudentPerformanceAn"
+keywords = []"""
+            },
+            "User responsible for creating a project": {
+                "query": """from Project  select createdBy""",
+                "result": """createdBy = "joelknapp" """
+            }
+        },
+        
+        "Process and Workflow Queries": {
+            "Experiment stages": {
+                "query": """from Experiment  select stages""",
+                "result": """name = "stage@StudentPerformanceAn" """
+            },
+            "Actions with status and execution details": {
+                "query": """from Action  where name = "Action - Student Performance Analysis"  
+select qualifiedName, inputData, outputData, status""",
+                "result": """qualifiedName = "notebook-student-performance-analysis.ipynb-v1@StudentPerformanceAn"
+status = "Completed"
+inputData = "Analysis of 1 datasets: Student_performance_data _.csv"
+outputData = "Generated 16 outputs including models and visualizations"""
+            }
+        },
+        
+        "Data Lineage and Traceability Queries": {
+            "Input datasets used in the project": {
+                "query": """from UsedData  
+where format = "csv"  
+select name, size""",
+                "result": """document = ["Student_performance_data _.csv"]
+size = [166901]"""
+            },
+            "All visualization artifacts produced": {
+                "query": """from UsedData where format = "png" """,
+                "result": """- Chart: Figure 1 - KNeighborsClassifier - Correlation Among Features
+- Chart: Figure 2 - KNeighborsClassifier - Selecting a Classification Model  
+- Chart: Figure 3 - KNeighborsClassifier - Model Evaluation
+- Chart: Figure 4 - SVC - Model Evaluation (again)
+- Chart: Figure 5 - GradientBoostingClassifier - Reducing Dimensionality"""
+            }
+        },
+        
+        "Consensus and Validation Queries": {
+            "Validation results for the project": {
+                "query": """from Consensus  select typeConsensus, result""",
+                "result": """typeConsensus = "Individual Review"
+result = "approved" """
+            },
+            "Actions with approved consensus": {
+                "query": """from Consensus
+where result = "approved"
+select action""",
+                "result": """action.name = "Action - Student Performance Analysis" """
+            }
+        }
+    }
+    
+    # Category selector
+    st.subheader("📋 Select Query Category")
+    selected_category = st.selectbox(
+        "Choose a category:",
+        list(queries_data.keys()),
+        help="Select the query category you want to explore"
+    )
+    
+    # Display queries from selected category
+    if selected_category:
+        st.subheader(f"🔎 {selected_category}")
+        
+        # Create tabs for each query in the category
+        query_names = list(queries_data[selected_category].keys())
+        tabs = st.tabs([f"Query {i+1}" for i in range(len(query_names))])
+        
+        for i, (query_name, query_info) in enumerate(queries_data[selected_category].items()):
+            with tabs[i]:
+                st.markdown(f"**{query_name}**")
+                
+                # Complete query at the top
+                st.markdown("**🔍 Query:**")
+                st.code(query_info["query"], language="sql")
+                
+                # Complete result at the bottom
+                st.markdown("**📊 Result:**")
+                st.code(query_info["result"], language="text")
+                
+                # Button to copy the query
+                if st.button(f"📋 Copy Query", key=f"copy_{selected_category}_{i}"):
+                    st.success("Query copied 🙂 ")
+    
+    # Additional information
+    st.divider()
+    st.info("""
+    💡 **Note:** These queries demonstrate how the RPCM (Research Process Conceptual Model) 
+    enables comprehensive queries on different aspects of a research project, 
+    from organization to validation of results.
+    """)
+
+
+    
