@@ -6,7 +6,7 @@ from datetime import datetime
 from kaggle.api.kaggle_api_extended import KaggleApi
 import pandas as pd
 
-from util_analysis import show_csv_metadata_from_json_path,plot_boxplots_streamlit,plot_histograms_streamlit,taxonomy_queries_section_analysis
+from util_analysis import show_csv_metadata_from_json_path,plot_boxplots_streamlit,plot_histograms_streamlit,taxonomy_queries_section_analysis_project
 from util_retail import show_csv_metadata_from_json_path_retail, taxonomy_queries_section_retail
 
 # os.environ["KAGGLE_USERNAME"] = st.secrets["KAGGLE_USERNAME"]
@@ -390,7 +390,7 @@ if selected_key == "Student Performance Analysis":
 
     st.markdown(" ## 🔍 Step 4:  Taxonomy Queries")
 
-    taxonomy_queries_section_analysis()
+    taxonomy_queries_section_analysis_project()
 
     
 

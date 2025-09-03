@@ -254,7 +254,7 @@ def plot_boxplots_streamlit(file_data, group_size=4):
     )
     st.plotly_chart(fig, use_container_width=True)
 
-def taxonomy_queries_section_analysis():
+def taxonomy_queries_section_analysis_project():
     """
     Streamlit section to display taxonomy queries for the 
     Student Performance Analysis project with interactive interface
