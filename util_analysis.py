@@ -376,4 +376,101 @@ select action""",
     """)
 
 
-    
+def plot_histograms(file_data, group_size=4):
+    file_path = file_data.get('file_path')
+    filename = file_data.get('filename', 'File')
+
+    st.markdown("The frequency and values of each column of the dataset are presented.")
+
+    if not file_path or not Path(file_path).exists():
+        st.warning(f"⚠️ Cannot open {filename} for plotting.")
+        return
+
+    try:
+        df = pd.read_csv(file_path)
+    except Exception as e:
+        st.error(f"Error reading {filename}: {e}")
+        return
+
+    numeric_columns = df.select_dtypes(include=['number']).columns
+    if len(numeric_columns) == 0:
+        st.info("No numeric columns to plot.")
+        return
+
+    total_cols = min(group_size, len(numeric_columns))
+    rows = math.ceil(len(numeric_columns) / total_cols)
+
+    fig = make_subplots(
+        rows=rows, cols=total_cols,
+        subplot_titles=numeric_columns,
+        horizontal_spacing=0.1, vertical_spacing=0.15
+    )
+
+    for i, col in enumerate(numeric_columns):
+        col_data = df[col].dropna()
+        
+        if len(col_data) == 0:
+            continue
+            
+        unique_vals = col_data.nunique()
+
+        # More robust dynamic bins calculation
+        try:
+            if unique_vals <= 5:
+                nbins = unique_vals
+            elif unique_vals <= 30:
+                nbins = min(15, unique_vals)
+            else:
+                # Use Freedman-Diaconis rule with safety checks
+                q75, q25 = np.percentile(col_data, [75, 25])
+                iqr = q75 - q25
+                data_range = col_data.max() - col_data.min()
+                
+                # Safety checks to prevent overflow
+                if iqr == 0 or data_range == 0 or len(col_data) == 0:
+                    nbins = 20  # Default fallback
+                else:
+                    bin_width = 2 * iqr * (len(col_data) ** (-1/3))
+                    
+                    # Prevent extremely small bin_width
+                    if bin_width <= 0 or np.isinf(bin_width) or np.isnan(bin_width):
+                        nbins = 20
+                    else:
+                        calculated_bins = data_range / bin_width
+                        
+                        # Prevent overflow and set reasonable limits
+                        if np.isinf(calculated_bins) or np.isnan(calculated_bins):
+                            nbins = 20
+                        else:
+                            nbins = max(10, min(100, int(np.ceil(calculated_bins))))
+                            
+        except (ValueError, OverflowError, ZeroDivisionError):
+            # Fallback to square root rule
+            nbins = max(10, min(50, int(np.sqrt(len(col_data)))))
+
+        row = i // total_cols + 1
+        col_pos = i % total_cols + 1
+
+        fig.add_trace(
+            go.Histogram(
+                x=col_data,
+                nbinsx=nbins,
+                marker_color='skyblue',
+                marker_line=dict(color='black', width=1),
+                name=col,
+                showlegend=False
+            ),
+            row=row, col=col_pos
+        )
+
+        # Set axis labels for each subplot
+        fig.update_xaxes(title_text="Value", row=row, col=col_pos)
+        fig.update_yaxes(title_text="Frequency", row=row, col=col_pos)
+
+    fig.update_layout(
+        showlegend=False,
+        height=250 * rows,
+        template="plotly_white",
+    )
+
+    st.plotly_chart(fig, use_container_width=True)

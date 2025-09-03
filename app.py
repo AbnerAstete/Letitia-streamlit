@@ -6,7 +6,7 @@ from datetime import datetime
 from kaggle.api.kaggle_api_extended import KaggleApi
 import pandas as pd
 
-from util_analysis import show_csv_metadata_from_json_path,plot_boxplots_streamlit,plot_histograms_streamlit,taxonomy_queries_section_analysis_project
+from util_analysis import show_csv_metadata_from_json_path,plot_boxplots_streamlit,plot_histograms_streamlit,taxonomy_queries_section_analysis_project, plot_histograms
 from util_retail import show_csv_metadata_from_json_path_retail, taxonomy_queries_section_retail
 
 # os.environ["KAGGLE_USERNAME"] = st.secrets["KAGGLE_USERNAME"]
@@ -484,10 +484,8 @@ elif selected_key == "Retail Data Analytics":
     selected_dataset_name = st.selectbox("", list(datasets.keys()))
     dataset = datasets[selected_dataset_name]
     file_data = {"file_path": dataset["file_path"], "filename": selected_dataset_name}
-
     # Mostrar metadata solo del dataset seleccionado
     show_csv_metadata_from_json_path_retail(dataset["json_path"], selected_dataset_name)
-
     # Plots solo del dataset seleccionado
     st.markdown("### 📊 Plots")
     tab1, tab2 = st.tabs(["Histograms", "Boxplots"])
@@ -518,8 +516,7 @@ elif selected_key == "Retail Data Analytics":
         st.markdown("### 📊 Plots")
         tab1, tab2 = st.tabs(["Histograms", "Boxplots"])
         with tab1:
-            #plot_histograms_streamlit(file_data, group_size=4)
-            st.markdown("A")
+            plot_histograms(file_data, group_size=4)
         with tab2:
             plot_boxplots_streamlit(file_data, group_size=4)
 
