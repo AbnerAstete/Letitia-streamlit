@@ -182,7 +182,7 @@ if selected_key == "Student Performance Analysis":
     )
 
 
-    st.image("images/step2.svg", caption="Metadata Extraction")
+    st.image("images/step2.png", caption="Metadata Extraction")
 
 
     # Cargar metadata desde el JSON
