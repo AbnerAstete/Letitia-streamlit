@@ -182,7 +182,7 @@ if selected_key == "Student Performance Analysis":
     )
 
 
-    st.image("images/step2.svg", caption="Metadata Extraction")
+    st.image("images/step2.png", caption="Metadata Extraction")
 
 
     # Cargar metadata desde el JSON
@@ -555,7 +555,7 @@ elif selected_key == "Retail Data Analytics":
         unsafe_allow_html=True
     )
 
-    # st.image("images/step2.svg", caption=" Metadata Extraction")
+    st.image("images/step2.png", caption=" Metadata Extraction")
 
     # Cargar metadata desde el JSON
     json_retil_metadata_path = "jsons-retail/kernel-metadata.json"
@@ -718,7 +718,6 @@ elif selected_key == "Retail Data Analytics":
     """)
 
     st.image("images/step3.svg", caption="Data Pipeline Steps")
-
 
     st.markdown("""
     When metadata is taken from Kaggle (information about datasets, notebooks, models, and results), it arrives in a raw and fragmented form. To make this information useful for research management, it is transformed into structured entities that can be stored in the metadata system.
